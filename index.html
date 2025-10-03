@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karim Hesham Mansour — Data Analyst</title>
+  <meta name="description" content="Portfolio — Karim Hesham Mansour | Data Analyst" />
+  <style>
+    /* Reset & basics */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#0f172a 0%, #0b1220 100%);
+      color:#e6eef8; -webkit-font-smoothing:antialiased; padding:28px;
+      display:flex;justify-content:center;align-items:flex-start;
+    }
+
+    /* container */
+    .wrap{width:100%;max-width:1100px}
+
+    header{display:flex;gap:20px;align-items:center;margin-bottom:18px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .brand{font-weight:700;font-size:18px;color:#fff}
+    nav{margin-left:auto}
+    nav a{color:rgba(230,238,248,0.8);text-decoration:none;margin-left:14px;font-weight:600}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));border-radius:16px;padding:26px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+
+    .intro h1{font-size:40px;line-height:1.02;margin-bottom:10px;color:#fff}
+    .intro h1 .accent{color:#ffd166}
+    .intro p{color:rgba(230,238,248,0.85);margin-bottom:16px}
+    .cta{display:flex;gap:12px}
+    .btn{background:linear-gradient(90deg,#6a00f4,#b600ff);padding:12px 16px;border-radius:12px;color:white;text-decoration:none;font-weight:700;box-shadow:0 12px 30px rgba(166,77,255,0.12)}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:12px 16px;border-radius:12px;color:rgba(230,238,248,0.9);display:inline-flex;align-items:center;gap:8px}
+
+    /* profile circle */
+    .profile{display:flex;justify-content:center}
+    .photo{
+      width:360px;height:360px;border-radius:50%;overflow:hidden;border:10px solid rgba(255,255,255,0.04);background:radial-gradient(circle at 30% 20%, rgba(255,255,255,0.04), transparent 30%);
+      position:relative;box-shadow:0 30px 80px rgba(2,6,23,0.8);
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* floating art */
+    .art{position:absolute;right:-30px;top:40px;width:200px;height:200px;pointer-events:none;opacity:0.12}
+
+    /* skills grid */
+    .skills-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:18px}
+    .skill-box{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;text-align:center;min-height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .skill-box img{width:36px;height:36px;margin-bottom:8px}
+    .skill-box p{font-weight:700;color:#fff}
+
+    /* projects */
+    .projects{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+    .proj{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:12px;display:flex;gap:12px}
+    .proj .thumb{width:110px;height:80px;border-radius:8px;overflow:hidden;flex-shrink:0}
+    .proj .thumb img{width:100%;height:100%;object-fit:cover}
+    .proj h4{margin-bottom:6px}
+    .meta{color:rgba(230,238,248,0.7);font-size:13px}
+
+    /* footer contact */
+    .contact{display:flex;gap:12px;margin-top:18px;align-items:center}
+    .icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,#111827,#0b1220);display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.03)}
+
+    /* responsive */
+    @media(max-width:980px){.hero{grid-template-columns:1fr} .profile{justify-content:flex-start} .skills-grid{grid-template-columns:repeat(3,1fr)} .projects{grid-template-columns:1fr}}
+
+    /* subtle animations */
+    .fade-in{animation:fade .9s ease both}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+    /* decorative SVG blob */
+    .blob{position:absolute;left:-60px;top:40px;filter:blur(20px);opacity:0.14}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><div class="brand">Karim Hesham</div><div style="color:rgba(230,238,248,0.55)">• Data Analyst</div></div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro fade-in" id="about">
+        <h1>Hi, I'm <span class="accent">Karim Hesham Mansour</span></h1>
+        <p style="font-size:16px">Electronic and Communication Engineering student with a passion for data analysis, business intelligence, and machine learning. My background in telecom and networking gives me a solid understanding of how data moves.</p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="ghost" href="#contact">Contact</a>
+        </div>
+
+        <!-- skills preview -->
+        <div style="margin-top:18px">
+          <h3 style="color:#cfe8ff;margin-bottom:8px">Quick Skills</h3>
+          <div class="skills-grid" id="skills">
+            <!-- populated by JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="profile card fade-in" aria-hidden="false">
+        <div class="photo" title="Karim">
+          <!-- placeholder circular photo (generated SVG) -->
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%239b5cff'/><stop offset='1' stop-color='%23ff8a00'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g)'/><g fill='%23fff' font-size='80' font-family='Arial' font-weight='700'><text x='50%' y='45%' dominant-baseline='middle' text-anchor='middle' font-size='92'>KH</text><text x='50%' y='60%' dominant-baseline='middle' text-anchor='middle' font-size='30'>Data Analyst</text></g></svg>" alt="Karim photo" />
+        </div>
+
+        <svg class="art" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#9b9bff" stroke-width="1.2" stroke-linecap="round">
+            <path d="M10 30 C40 5, 90 5, 120 30"/>
+            <path d="M40 140 C80 110, 140 110, 180 140"/>
+            <circle cx="40" cy="30" r="3" fill="#fff" stroke="none"/>
+            <circle cx="140" cy="140" r="3" fill="#fff" stroke="none"/>
+          </g>
+        </svg>
+
+      </aside>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" style="margin-top:18px">
+      <div class="card">
+        <h3 style="color:#cfe8ff">Featured Projects</h3>
+        <div class="projects">
+          <div class="proj fade-in">
+            <div class="thumb"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><defs><linearGradient id='g1' x1='0' x2='1'><stop offset='0' stop-color='%2356ccf2'/><stop offset='1' stop-color='%235a0fbf'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g1)' rx='8'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='28' fill='white'>Clothing Brand — Web (mockup)</text></svg>" alt="brand mockup"></div>
+            <div>
+              <h4>Clothing Brand Website — mockup</h4>
+              <div class="meta">A responsive web site for my clothing brand — product pages, simple cart flow and brand visuals. (Mock data & images used)</div>
+            </div>
+          </div>
+
+          <div class="proj fade-in">
+            <div class="thumb"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23ff7f50' rx='8'/><text x='50%' y='46%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='28' fill='white'>Bioscan Dashboard</text><text x='50%' y='66%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14' fill='white'>Vitals: HR • SpO2 • Temp</text></svg>" alt="bioscan"></div>
+            <div>
+              <h4>Bioscan Dashboard</h4>
+              <div class="meta">Interactive dashboard showing patient vitals (heart rate, oxygen saturation, temperature). Built with dashboards and visualisation best-practices.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- certifications -->
+        <div style="margin-top:14px">
+          <h3 style="color:#cfe8ff">Selected Courses & Certificates</h3>
+          <ul style="margin-top:8px;color:rgba(230,238,248,0.8);line-height:1.7">
+            <li>CCNA — NTI</li>
+            <li>GSM/GPRS/EDGE Course — Udemy</li>
+            <li>Data Analysis & Business Intelligence courses (Python, Power BI, Excel)</li>
+            <li>Machine Learning fundamentals (introductory)</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" style="margin-top:18px">
+      <div class="card">
+        <h3 style="color:#cfe8ff">Contact</h3>
+        <p style="color:rgba(230,238,248,0.85);margin-top:6px">Feel free to reach out for collaborations, projects or enquiries.</p>
+        <div class="contact" style="margin-top:12px">
+          <a class="icon" href="https://www.linkedin.com/in/karim-hesham-7452b8257/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.604 4.07 5.5 2.98 5.5 1.87 5.5 1 4.604 1 3.5 1 2.395 1.87 1.5 2.98 1.5 4.07 1.5 4.98 2.395 4.98 3.5zM1 8.999h4v12H1v-12zM9 8.999h3.657v1.641h.052c.51-.97 1.757-1.994 3.618-1.994 3.871 0 4.586 2.55 4.586 5.869v6.484H19V15.33c0-2.55-.046-5.83-3.554-5.83-3.554 0-4.096 2.773-4.096 5.65v6.849H9v-12z" fill="white"/></svg>
+          </a>
+
+          <a class="icon" href="https://wa.me/201023746521" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48C18.14 1.1 15.07 0 11.78 0 5.64 0 .5 5.14 .5 11.27c0 1.99.52 3.93 1.51 5.66L.5 24l7.33-1.98c1.68.92 3.6 1.4 5.46 1.4 6.14 0 11.28-5.14 11.28-11.27 0-3.3-1.1-6.37-3.06-8.62zM11.78 21.3c-1.58 0-3.11-.44-4.44-1.26l-.32-.2-4.35 1.18 1.17-4.23-.21-.34C3.62 14.2 3.2 12.76 3.2 11.27 3.2 6.76 6.77 3.2 11.28 3.2c2.79 0 5.09 1.09 6.88 2.88 1.78 1.78 2.87 4.09 2.87 6.88 0 6.02-4.88 10.14-10.25 10.14z" fill="white"/></svg>
+          </a>
+
+          <div style="margin-left:auto;color:rgba(230,238,248,0.85)">Phone / WhatsApp: <strong>+20 102 374 6521</strong></div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer style="margin-top:18px;text-align:center;color:rgba(230,238,248,0.6);font-size:13px">Generated mock portfolio — ready to edit. Want it exported to GitHub Pages or Netlify? I can prepare the repo.</footer>
+
+  </div>
+
+  <script>
+    // skills list (matching image you provided)
+    const skills = [
+      {name:'Python', icon:''},
+      {name:'Power BI', icon:''},
+      {name:'Data Cleaning', icon:''},
+      {name:'Excel', icon:''},
+      {name:'Power Query', icon:''},
+      {name:'Visualization', icon:''},
+      {name:'SQL', icon:''},
+      {name:'Problem Solving', icon:''},
+      {name:'GitHub', icon:''},
+      {name:'Prompt Engineering', icon:''}
+    ];
+
+    const skillsEl = document.getElementById('skills');
+    skills.forEach(s=>{
+      const el = document.createElement('div');
+      el.className='skill-box';
+      el.innerHTML = `<img src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'64\' height=\'64\'><rect width=\'100%\' height=\'100%\' rx=\'12\' fill=\'%23ffffff11\'/></svg>' alt='' /><p>${s.name}</p>`;
+      skillsEl.appendChild(el);
+    });
+
+  </script>
+</body>
+</html>
